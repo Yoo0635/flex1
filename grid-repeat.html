@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body, html {
+  margin : 0 0;
+}
+.grid-container {
+	display  :  grid;
+	grid-template-columns :100px repeat(3, 1fr);
+	/*grid-template-rows : 200px 300px  100px; 3행 */
+	grid-gap :  10px; /* grid-column-gap과 grid-row-gap */
+    max-width : 700px;
+    height : 400px;  /*높이를 할당하였음 */
+    margin : 0 auto;
+    background-color : yellow;
+}
+.grid-item {
+	background-color : red;
+    font-size : 2rem;
+}
+</style>
+</head>
+<body>
+
+<div class="grid-container">
+   <div class="grid-item">1</div>
+   <div class="grid-item">2</div>
+   <div class="grid-item">3</div>  
+   <div class="grid-item">4</div>
+   <div class="grid-item">5</div>
+   <div class="grid-item">6</div>   
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body,
+      html {
+        margin: 0 0;
+      }
+      .grid-container {
+        display: grid;
+        grid-template-columns: 200px 1fr 150px;
+        grid-template-rows: 150px 1fr 100px;
+        grid-gap: 0.5rem; /* grid-column-gap과 grid-row-gap */
+        width: 960px;
+        height: 100vh;
+        margin: 0 auto;
+        background-color: yellow;
+      }
+      .grid-item {
+        background-color: red;
+        font-size: 2rem;
+      }
+      .header {
+        grid-column: 1/4; /* 시작라인/종료라인  1/ span 3;*/
+        grid-row: 1/2;
+      }
+      .nav {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        background-color: green;
+      }
+      .main {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        background-color: navy;
+      }
+      .aside {
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
+        background-color: pink;
+      }
+      .footer {
+        grid-column: 1 / 4;
+        grid-row: 3 / 4;
+        background-color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="grid-item header">header</div>
+      <div class="grid-item nav">nav</div>
+      <div class="grid-item main">main</div>
+      <div class="grid-item aside">aside</div>
+      <div class="grid-item footer">footer</div>
+    </div>
+  </body>
+</html>

@@ -1,34 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>box model</title>
+    <title>Flex-direction 실습</title>
     <style>
-      div {
-        width: 100px;
-        border: 5px solid red;
-        background-color: mistyrose;
+      .container {
+        display: flex;
+        border: 2px solid #000;
+        margin: 10px;
         padding: 5px;
-        outline: 10px dotted purple;
-        margin: 36px;
+      }
+      .item {
+        background: white;
+        border: 2px solid black;
+        margin: 5px;
+        padding: 20px;
+        font-weight: bold;
+      }
+
+      /* 각 flex-direction 박스 스타일 */
+      .row {
+        flex-direction: row;
+        background: darkred;
+        color: white;
+      }
+      .row-rev {
+        flex-direction: row-reverse;
+        background: darkred;
+        color: white;
+      }
+      .col {
+        flex-direction: column;
+        background: darkblue;
+        color: white;
+      }
+      .col-rev {
+        flex-direction: column-reverse;
+        background: darkblue;
+        color: white;
+      }
+
+      h3 {
+        margin: 10px 0 5px 0;
+      }
+      code {
+        color: red;
       }
     </style>
   </head>
   <body>
-    <div>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ea velit
-      cum animi officiis. Aut vero impedit sint pariatur quasi, eum voluptatem
-      illo aperiam. Quos in officiis autem labore minima!
+    <h1>Flex-direction 속성</h1>
+
+    <h3>container { display: flex; flex-direction: row (디폴트); }</h3>
+    <div class="container row">
+      <div class="item">A</div>
+      <div class="item">B</div>
+      <div class="item">C</div>
+      <div class="item">컨테이너</div>
     </div>
-    <span
-      >Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum,
-      error!</span
-    >
-    <ul>
-      <li>figthing1</li>
-      <li>figthing2</li>
-      <li>figthing3</li>
-    </ul>
+
+    <h3>container { display: flex; flex-direction: row-reverse; }</h3>
+    <div class="container row-rev">
+      <div class="item">A</div>
+      <div class="item">B</div>
+      <div class="item">C</div>
+      <div class="item">컨테이너</div>
+    </div>
+
+    <h3>container { display: flex; flex-direction: column; }</h3>
+    <div class="container col">
+      <div class="item">A</div>
+      <div class="item">B</div>
+      <div class="item">C</div>
+      <div class="item">컨테이너</div>
+    </div>
+
+    <h3>container { display: flex; flex-direction: column-reverse; }</h3>
+    <div class="container col-rev">
+      <div class="item">A</div>
+      <div class="item">B</div>
+      <div class="item">C</div>
+      <div class="item">컨테이너</div>
+    </div>
   </body>
 </html>
